@@ -5,6 +5,7 @@ Vagrant.configure("2") do |config|
     vb.memory = "1024"  # Quantidade de memória RAM
     vb.cpus = 2  # Número de CPUs
   config.vm.provision "shell", path: "shell/vm1.sh" # Arquivo shell a ser lido e executado
+  config.vm.synced_folder "/var/www/html", "/var/www/html" # Pasta compartilhada
   end
 end
 
