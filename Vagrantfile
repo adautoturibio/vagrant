@@ -2,7 +2,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "vm1" do |vm1|
     vm1.vm.box = "ubuntu/bionic64"  # Box (imagem base) a ser usada
-    vm1.vm.network "private_network", ip: "192.168.50.10"  # Configuração de rede
+    vm1.vm.network "private_network", type: "static", ip: "192.168.50.10"  # Configuração de rede
     vm1.vm.provider "virtualbox" do |vb|  # Provedor de virtualização
       vb.memory = "1024"  # Quantidade de memória RAM
       vb.cpus = 2  # Número de CPUs
@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "vm2" do |vm2|
     vm2.vm.box = "ubuntu/bionic64"  # Box (imagem base) a ser usada
-    vm2.vm.network "private_network", ip: "192.168.50.11"  # Configuração de rede
+    vm2.vm.network "private_network", type: "static", ip: "192.168.50.11"  # Configuração de rede
     vm2.vm.provider "virtualbox" do |vb|  # Provedor de virtualização
       vb.memory = "1024"  # Quantidade de memória RAM
       vb.cpus = 2  # Número de CPUs
@@ -22,6 +22,17 @@ Vagrant.configure("2") do |config|
     end
   end
 
+
+  config.vm.define "vm3" do |vm3|
+    vm3.vm.box = "ubuntu/bionic64" 
+    vm3.vm.network "private_network", type: "static", ip: "192.168.50.12"
+    vm3.vm.network "public_network", type: "dhcp"
+    vm3.vm.provider "virtualbox" do |vb|  
+      vb.memory = "512" 
+      vb.cpus = 1 
+  # vm3.vm.provision "shell", path: "shell/vm2.sh" # Arquivo shell a ser lido e executado
+    end
+  end
 end
 
 
