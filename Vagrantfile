@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
     end
   end
 
-
+  
   config.vm.define "vm2" do |vm2|
     vm2.vm.box = "ubuntu/bionic64"  
     vm2.vm.hostname = "banco-mysql"
@@ -29,11 +29,11 @@ Vagrant.configure("2") do |config|
     vm3.vm.box = "ubuntu/bionic64" 
     vm3.vm.hostname = "gateway"
     vm3.vm.network "private_network", type: "static", ip: "192.168.50.12"
-    vm3.vm.network "public_network", type: "dhcp"
+    vm3.vm.network "public_network", type: "dhcp", bridge: "enp1s0"
     vm3.vm.provider "virtualbox" do |vb|  
       vb.memory = "512" 
       vb.cpus = 1 
-  # vm3.vm.provision "shell", path: "shell/vm2.sh" # Arquivo shell a ser lido e executado
+    vm3.vm.provision "shell", path: "shell/vm3.sh" 
     end
   end
 end
