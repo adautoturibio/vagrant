@@ -1,5 +1,5 @@
 # Documentação
-O objetivo desta documentação é exibir o passo a passo para que está aplicação funcione!
+O objetivo desta documentação é exibir o passo a passo para subir um ambiente virtual de 3 máquinas virtuais. A primeira sendo um servidor web e a segunda um banco de dados mysql, ambas com IP estático e privado. Já a terceira servirá como um gateway para que as outras duas VM's acessem a internet através dela. As máquinas serão provisionadas pelo Virtualbox e configuradas pelo Vagrant.
 
 ## Pré requisitos
 
