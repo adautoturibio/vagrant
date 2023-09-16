@@ -17,3 +17,8 @@ O objetivo desta documentação é exibir o passo a passo para que está aplica�
 * Suba as máquinas virtuais, através do comando `vagrant up`
 * Acesse as máquinas virtuais, através do comando `vagrant ssh <nome_da_maquina>`
   >  Lembre-se de executar esses comando no mesmo diretório do Vagratfile.
+
+## Testes
+
+1) Para testar que o ambiente virtual está funcionado corretamente, basta usar o comando `ping google.com`nas VM's 1 e 2. Se elas estiverem conseguindo acessar a internet, está funcionado conforme o planejado.
+2) Para certificar que as VM's 1 e 2 estão acessando a internet através da terceira VM, basta ver se a rota padrão do IP está configurada com o mesmo IP da terceira VM, através do comando `ip route`ou `route -n`.
