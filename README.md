@@ -20,6 +20,7 @@ O objetivo desta documentação é exibir o passo a passo para que está aplica�
    
   >  Lembre-se de executar esses comando no mesmo diretório do Vagratfile.
 
+
 ## Testes
 
 * Para testar que o ambiente virtual está funcionado corretamente, basta usar o comando `ping google.com`nas VM's 1 e 2. Se elas estiverem conseguindo acessar a internet, está funcionado conforme o planejado.
