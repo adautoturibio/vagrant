@@ -26,3 +26,5 @@ O objetivo desta documentação é exibir o passo a passo para subir um ambiente
 * Para testar que o ambiente virtual está funcionado corretamente, basta usar o comando `ping google.com`nas VM's 1 e 2. Se elas estiverem conseguindo acessar a internet, está funcionado conforme o planejado.
   
 * Para certificar que as VM's 1 e 2 estão acessando a internet através da terceira VM, basta ver se a rota padrão do IP está configurada com o mesmo IP da terceira VM, através do comando `ip route`ou `route -n`.
+* Para testar se o Apache está funcionado corretamente na VM1, execute o comando `service apache2 status`.
+* Para testar se o MySQL está funcionando corretaente na VM2, execute o comando `service mysql status`.
