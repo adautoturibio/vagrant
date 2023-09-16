@@ -12,4 +12,4 @@ O objetivo desta documentação é exibir o passo a passo para que está aplica�
 * Abra o terminal no mesmo local onde está o Vagrantfile
 * Defina sua interface de rede no arquivos vm1.sh, vm2.sh e vm3.sh.
   
-  > No meu caso, a minha interface de rede é a enp0s3. Se for também o seu caso, não é necessário alteração. Mas caso sua interface seja outra, é necessário que você altere a linha 2 desses arquivos, subistituindo "enp0s3" pelo nome da sua interface.
+  > No meu caso, a minha interface de rede é a enp0s3. Se for também o seu caso, não é necessário alteração. Mas caso sua interface seja outra, é preciso que você altere a linha 2 desses arquivos, subistituindo "enp0s3" pelo nome da sua interface de rede física.
